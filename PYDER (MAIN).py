@@ -1,6 +1,35 @@
-print('Ifeanyi Virtual assistant robot v2.7.9\n\n')
+import pyttsx3
+import webbrowser
+def speak(audio):
+	
+	engine = pyttsx3.init()
+	# getter method(gets the current value
+	# of engine property)
+	voices = engine.getProperty('voices')
+	
+	# setter method .[0]=male voice and
+	# [1]=female voice in set Property.
+	engine.setProperty('voice', voices[1].id)
+	
+	# Method for the speaking of the assistant
+	engine.say(audio)
+	
+	# Blocks while processing all the currently
+	# queued commands
+	engine.runAndWait()
+print('Ifeanyi Virtual assistant robot: There is a newer version of this application by Ifeanyi:\nWould you like to open it')
+speak('eefarnyi Virtual assistant robot: There is a newer version of this application by eefarnyi:\nWould you like to open it')
 #name input
-Name = input("What is your Name: ")
+open = input("(yes/no): ")
+if open == 'yes':
+    webbrowser.open("https://github.com/CoderIfeanyi/PYDER-2.0/blob/main/PYDER%202.0")
+    webbrowser.open("https://github.com/CoderIfeanyi/PYDER-2.0/blob/main/Commands")
+    speak("You might need to download some modules to run this program: use commands page to see neede modules")
+    exit()
+    if open == 'no':
+            speak("What is your name")
+            Name = input("What is your Name: ")
+            speak("please enter a username")
 username = input("Please enter a username:")
 password = input("Please enter a password:")
 #login
@@ -11,7 +40,7 @@ userInput = input("What is your username?\n")
 if userInput == username1:
     a=input("Password?\n")
     if a == 'password_user':
-        print("Correct password, Welcome "+Name+"")
+            speak("Correct password, Welcome "+Name+"")
      #activity area
 activity_user = input("\nWhat would you like to do:\nGames\nCalculator\nGoogle\nSettings\nYoutube:\n")
 #settings is being worked on
@@ -274,3 +303,4 @@ if activity_user == 'Google':
 
 if activity_user == 'Youtube':
   print("Search Here")
+
