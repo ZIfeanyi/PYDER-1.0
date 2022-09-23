@@ -1,0 +1,9 @@
+A new version has been created: https://github.com/CoderIfeanyi/PYDER-2.0/blob/main/PYDER%202.0
+
+pip installs:
+on cmd:
+
+pip install webbrowser (if not already installed)
+pip install pyttsx3
+
+some features might not work
